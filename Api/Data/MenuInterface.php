@@ -17,6 +17,8 @@ interface MenuInterface
 
     const STORE_RELATION_TABLE = 'snowmenu_store';
 
+    const CACHE_TAG = 'snowdog_menu_menu';
+
     /**
      * Get menu id
      *
