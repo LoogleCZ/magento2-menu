@@ -124,9 +124,9 @@ class Menu extends Template implements DataObject\IdentityInterface
     public function getIdentities()
     {
         return [
-            \Snowdog\Menu\Model\Menu::CACHE_TAG . '_' . $this->loadMenu()->getId(),
+            \Snowdog\Menu\Api\Data\MenuInterface::CACHE_TAG . '_' . $this->loadMenu()->getId(),
             Block::CACHE_TAG,
-            \Snowdog\Menu\Model\Menu::CACHE_TAG
+            \Snowdog\Menu\Api\Data\MenuInterface::CACHE_TAG
         ];
     }
 
@@ -169,7 +169,7 @@ class Menu extends Template implements DataObject\IdentityInterface
     public function getCacheKeyInfo()
     {
         $info = [
-            \Snowdog\Menu\Model\Menu::CACHE_TAG,
+            \Snowdog\Menu\Api\Data\MenuInterface::CACHE_TAG,
             'menu_' . $this->loadMenu()->getId(),
             'store_' . $this->_storeManager->getStore()->getId(),
             'template_' . $this->getTemplate()
