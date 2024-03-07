@@ -18,6 +18,8 @@ use Magento\Store\Model\Store;
 
 /**
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ *
+ * @api
  */
 class Menu extends Template implements DataObject\IdentityInterface
 {
